@@ -13,6 +13,8 @@ public interface BookingMapper {
     BookingMapper INSTANCE = Mappers.getMapper(BookingMapper.class);
 
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "typeRoom", ignore = true)
+    @Mapping(target = "totalPrice", ignore = true)
     Booking bookingDTOToBooking(BookingDTO bookingDTO);
 
     BookingResponse bookingToBookingResponse (Booking booking);

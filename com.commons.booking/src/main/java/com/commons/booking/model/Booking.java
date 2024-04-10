@@ -23,20 +23,22 @@ public class Booking {
     @Column(name = "type_room")
     private String typeRoom;
 
-    @Column(name = "number_people")
-    private Long numberPeople;
+    @Column(name = "room_capacity")
+    private Long roomCapacity;
 
-    @Column(name = "entry_date")
+    @Column(name = "room_number", nullable = false)
+    private Long roomNumber;
+
+    @Column(name = "entry_date", nullable = false)
     private LocalDate entryDate;
 
-    @Column(name = "departure_date")
+    @Column(name = "departure_date", nullable = false)
     private LocalDate departureDate;
 
-    @Column(name = "price")
-    private Double price;
+    @Column(name = "total_price")
+    private Double totalPrice;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "client_id")
-    private Client client;
+    @Column(name = "client_id", nullable = false)
+    private Long clientId;
 
 }

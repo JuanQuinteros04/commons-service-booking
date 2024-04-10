@@ -13,15 +13,11 @@ import java.time.LocalDate;
 @EqualsAndHashCode
 public class BookingDTO {
 
-    private String typeRoom;
-
-    private Long numberPeople;
+    private Long roomNumber;
 
     private LocalDate entryDate;
 
     private LocalDate departureDate;
-
-    private Double price;
 
     private Long clientId;
 }
